@@ -9,9 +9,12 @@
   "license": "ISC",
   "description": "",
   "dependencies": {
+    "bootstrap": "^4.5.3",
     "express": "^4.17.1",
     "express-session": "^1.17.1",
+    "jade-bootstrap": "^1.0.14",
     "keycloak-connect": "^11.0.3",
-    "pug": "^3.0.0"
+    "pug": "^3.0.0",
+    "pug-bootstrap": "0.0.16"
   }
 }

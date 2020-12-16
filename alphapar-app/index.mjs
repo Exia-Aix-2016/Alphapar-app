@@ -1,5 +1,4 @@
 import express from 'express';
-import bodyParser from 'body-parser';
 import session from 'express-session';
 import Keycloak from 'keycloak-connect';
 import path from 'path';
@@ -22,6 +21,9 @@ app.use(
   })
 );
 
+app.use(express.static(path.join(__dirname, '/public')));
+
+
 const keycloak = new Keycloak({
   store: memoryStore
 });
@@ -34,11 +36,10 @@ app.use(
 );
 
 app.get('/', function(req, res) {
-  res.render(path.join(__dirname+'/about.pug'), { title: "Hey", message: "Hello there!" });
+  res.render(path.join(__dirname+'/about.pug'), { title: "Title", userName: "Jean-Didier", status: "Connected" });
 });
 
 app.get('/api/user', keycloak.protect('realm:user'), function(req, res) {
-
   res.sendFile(path.join(__dirname+'/about.pug'));
 });
 

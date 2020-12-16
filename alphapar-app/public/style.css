@@ -1,0 +1,13 @@
+.jumbotron.jumbotron-fluid{
+    margin-top: 5%;
+    min-height: 100%;
+    max-height: 100%;
+    overflow-y: auto;
+}
+.container{
+    height: 75%;
+}
+
+body{
+    background-image: url("background.jpg");
+}
