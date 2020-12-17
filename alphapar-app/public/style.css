@@ -3,6 +3,7 @@
     min-height: 100%;
     max-height: 100%;
     overflow-y: auto;
+    background: none
 }
 .container{
     height: 75%;
@@ -16,6 +17,10 @@ nav img{
     width: 30px;
 }
 
-#icon{
+#image{
     padding: 10;
+}
+
+#icon{
+    padding: 12px;
 }
