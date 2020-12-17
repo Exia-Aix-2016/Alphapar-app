@@ -29,21 +29,13 @@ app.use(
 app.use(express.static(path.join(__dirname, '/public')));
 
 app.use(
-  keycloak.middleware({
-    logout: '/logout',
-    admin: '/'
-  })
+  keycloak.middleware()
 );
 
-
-app.get('/', function(req, res) {
-  res.render(path.join(__dirname+'/about.pug'), { title: "Title", userName: "Jean-Didier", status: "Connected" });
+app.get('/', keycloak.protect(), function(req, res) {
+  const profile = req.kauth.grant.access_token.content;
+  res.render(path.join(__dirname+'/about.pug'), { title: "Title", userName: profile.name, status: "Connected" });
 });
-
-app.get('/api/user', keycloak.protect('realm:user'), function(req, res) {
-  res.sendFile(path.join(__dirname+'/about.pug'));
-});
-
 
 app.listen(3000, err => {
   if (err) {
