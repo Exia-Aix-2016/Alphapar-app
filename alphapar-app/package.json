@@ -15,6 +15,7 @@
     "jade-bootstrap": "^1.0.14",
     "keycloak-connect": "^11.0.3",
     "pug": "^3.0.0",
-    "pug-bootstrap": "0.0.16"
+    "pug-bootstrap": "0.0.16",
+    "serve-favicon": "^2.5.0"
   }
 }

@@ -11,3 +11,11 @@
 body{
     background-image: url("background.jpg");
 }
+
+nav img{
+    width: 30px;
+}
+
+#icon{
+    padding: 10;
+}

@@ -2,21 +2,22 @@ append styles
 	link(rel="stylesheet",href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css")
 	link(rel="stylesheet", href="/style.css", type="text/css")
 
+block head
+	title Alphapar
+	
 block body
 	.container
-		// Static navbar
 		nav.navbar.navbar-default
 			.container-fluid
 				.navbar-header
 					button.navbar-toggle.collapsed(type='button', data-toggle='collapse', data-target='#navbar', aria-expanded='false', aria-controls='navbar')
+					a.navbar-brand#icon 
+						img(src="/icon.png", alt="") 
 					a.navbar-brand Alphapar
 				#navbar.navbar-collapse.collapse
 					ul.nav.navbar-nav.navbar-right
 						li
 							a bonjour, #{userName}
-
-
-		// Main component for a primary marketing message or call to action
 		.jumbotron.jumbotron-fluid
 			
 				
