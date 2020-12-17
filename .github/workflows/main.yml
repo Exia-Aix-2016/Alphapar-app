@@ -39,4 +39,4 @@ jobs:
         uses: docker/build-push-action@v2
         with:
           push: true
-          tags: exia-aix-2016/alphapar-app:latest
+          tags:  Exia-Aix-2016/Alphapar-app:latest
