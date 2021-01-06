@@ -1,7 +1,7 @@
 {
     "realm": "Alphapar",
     "auth-server-url": "http://docker-thor:8080/auth/",
-    "ssl-required": "external",
+    "ssl-required": "none",
     "resource": "web-app",
     "public-client": true,
     "confidential-port": 0
