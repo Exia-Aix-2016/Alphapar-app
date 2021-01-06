@@ -5,4 +5,4 @@
     "resource": "web-app",
     "public-client": true,
     "confidential-port": 0
-  }
+}
